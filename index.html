@@ -1,0 +1,283 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Novedad</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Short+Stack&display=swap');
+
+    * {
+        margin: 0;
+        border: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Rubik", serif;
+        color: black;
+        /*scroll-behavior: smooth;*/
+
+        /*text-shadow: 1px 1px 2px rgb(32 52 66 / 10%);*/
+    }
+    .nav-1 {
+        max-width: 700px;
+        background-color: black;
+        margin: 0 auto;
+    }
+
+    .nav-1 li {
+        margin: 10px;
+        font-size: 32px;
+        color: aliceblue;
+        display: inline-block;
+        padding-right: 500px;
+        background-color: black;
+        cursor: pointer;
+    }
+
+    .nav-index{
+        text-align: left;
+    }
+
+    #logo3{
+        width: 90px;
+        
+    }
+    .nav-1 li:hover {
+        color: #686863;
+    }
+    body {
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    form {
+        margin: 0 auto;
+        text-align: center;
+        background-color: #a9a9a9;
+        max-width: 700px;
+        width: 100%;
+        box-shadow: 0 0 rgb(0 0 0 / 0%), 0 0 rgb(0 0 0 / 0%), 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .input {
+        height: 50px;
+        color: #000001;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 0 20px;
+        display: flex;
+        font-size: 25px;
+        color: black;
+
+    }
+
+    input[type=submit] {
+        width: 100%;
+        height: 50px;
+        background: #F6DF1C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        border: 1px solid black;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    input:hover{
+        background-color: gray;
+        border: 1px solid black;
+        box-shadow: 3px 3px 3px #000001;
+        color: #222;
+    }
+
+    label {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        font-size: 18px;
+    }
+
+    #preview {
+        width: 180px;
+        height: 180px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        margin-bottom: 25px;
+    }
+   
+    .inputContainer {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        font-size: 30px;
+        color: #000001;
+    }
+    .inputContainer input {
+        background-color: red;
+        opacity: 0;
+        z-index: 1;
+    }
+    .inputContainer button {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        border-radius: 8px;
+        z-index: 0;
+        color: black;
+    }
+    div .form-container{
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        color: aliceblue;
+        border: 1px solid black;
+    }
+
+    .photo{
+        background: #F6DF1C;
+        color: black;
+        border: 1px solid black;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    #opciones {
+        margin: 0 auto;
+        padding-left: 20px;
+        width: 300px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        background-color: aliceblue;
+        color: #000001;
+        border: 1px solid black;
+        cursor: pointer;
+}
+
+    #nombre{
+        margin-left: 5px;
+        width: 215px;
+        margin-bottom: 12px;
+        font-size: 16px;
+        background-color: aliceblue;
+        color: #000001;
+        border: 1px solid black;
+        padding: 0 10px;
+}
+
+    #rut{
+        margin-left: 5px;
+        width: 232px;
+        margin-bottom: 12px;
+        font-size: 16px;
+        background-color: aliceblue;
+        color: #000001;
+        border: 1px solid black;
+        padding: 0 10px;
+}
+
+       #ppo{
+        margin-left: 5px;
+        width: 300px;
+        font-size: 16px;
+        background-color: aliceblue;
+        color: #000001;
+        border: 1px solid black;
+        padding: 0 10px;
+        margin-bottom: 20px;
+}
+
+    </style>
+    <header>
+        <nav>
+        <ul class="nav-1">
+            <img id="logo3" src="./logo33.png" alt="logo">
+        </ul>
+    </nav>
+    </header>
+    <body>     
+    <form method='post' action='https://backend-akusete.herokuapp.com/upload2' enctype="multipart/form-data">
+    <h1>CONTROL DE NOVEDADES</h1>
+    <h2>HOSPITAL LUIS CALVO MACKENNA</h2>
+    <div class="form-container">
+        <select id='opciones' name='opciones'>
+        <option value='0'>Selecciona el lugar:</option>
+        <option value=' ECO 1 Entrada Principal'>ECO 1 Entrada Principal</option>
+        <option value=' ECO 2 Plaza'>ECO 2 Plaza</option>
+        <option value=' ECO 3 Salida'>ECO 3 Salida</option>
+        <option value=' ECO 4 Estacionamiento Kine'>ECO 4 Estacionamiento Kine</option>
+        <option value=' Estacionamiento SUI'>Estacionamiento SUI</option>
+        <option value=' Subterraneo'>Subterraneo</option>
+        <option value=' Roperia'>Roperia</option>
+        <option value=' TROI'>TROI</option>
+        <option value=' Dirección'>Dirección</option>
+        <option value=' SOME'>SOME</option>
+        <option value=' Ecocardiologia'>Ecocardiologia</option>
+        <option value=' Bicicletero'>Bicicletero</option>
+        <option value=' Central - Solis de Ovando'>Central - Solis de Ovando</option>
+        <option value=' AMICAM'>AMICAM</option>
+        <option value=' UPC'>UPC</option>
+        <option value=' Laboratorio'>Laboratorio</option>
+        <option value=' Casino'>Casino</option>
+        <option value=' Sector Area Limpia'>Sector Area limpia</option>
+    </select><br>
+        <select type='text' name='ppo' id='ppo'><br> 
+        <option value='0'>Selecciona  la Novedad</option>
+        <option value=' Notificación de Cierre'>Notificación de Cierre</option>
+        <option value=' Objeto encontrado'>Objeto encontrado</option>
+        <option value=' Armado de Alarma'>Armado de Alarma</option>
+        <option value=' Luces encendidas'>Luces encendidas</option>
+        <option value=' Bicicleta sin amarrar'>Bicicleta sin amarrar</option>
+        <option value=' Puerta Abierta'>Puerta Abierta</option>
+        <option value=' Computadores encendidos'>Computadores encendidos</option>
+        <option value=' Vehiculo mal estacionado'>Vehiculo mal estacionado</option>
+        <option value=' Vehiculo sin Logo'>Vehiculo sin Logo</option>
+        <option value=' Vehiculo abierto'>Vehiculo abierto</option>
+        <option value=' Padres molestos'>Padres molestos</option>       
+    </div> 
+    </label>
+    <input class="input" type="hidden" name="subject" value="Nuevo Reporte" placeholder="Asunto" required>
+    <input class="input" type="hidden" name="message" value="Reporte adjunto" placeholder="Mensaje" required>
+    <div class="inputContainer">
+        <input class="input" type="file" accept="image/*" name="fileUploaded" id="fileInput" required>
+        <button class="photo" type="button">Tomar foto de la novedad</button>
+    </div>
+    <img id="preview" src="#"  />
+    <input type="submit" value="Enviar Novedad">
+</form>
+<script>
+    const fileInput = document.getElementById("fileInput");
+    const preview = document.getElementById("preview");
+      fileInput.onchange = evt => {
+        const [file] = fileInput.files
+        if (file) {
+          preview.src = URL.createObjectURL(file)
+        }
+      }
+</script>  
+
+</body>
+</html>
